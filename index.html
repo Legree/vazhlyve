@@ -37,6 +37,11 @@ p{margin:0}
 .stat{background:var(--c15);border-radius:14px;padding:12px 16px;flex:1 1 140px}
 .stat b{display:block;font-size:24px;font-weight:900;letter-spacing:-.02em}
 .stat small{font-size:13px;color:var(--muted);font-weight:600}
+a.stat{position:relative;display:block;text-decoration:none;color:var(--ink);padding-right:38px;transition:transform .2s,box-shadow .2s,background .2s}
+a.stat:hover{color:var(--ink);background:var(--c25);transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,122,93,.18)}
+a.stat:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+a.stat i{position:absolute;right:14px;top:14px;font-style:normal;font-weight:900;width:24px;height:24px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;transition:transform .2s,background .2s}
+a.stat:hover i{background:var(--coral);transform:translateX(2px)}
 .hero-art{position:relative;height:250px}
 .hero-art .blob{position:absolute;inset:8% 4% 0 10%;border-radius:50% 50% 46% 54%/56% 48% 52% 44%;background:var(--coral) var(--pattern) repeat;background-size:200px auto;animation:morph 14s ease-in-out infinite}
 .hero-art .blob::after{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--coral);opacity:.86}
@@ -317,9 +322,9 @@ footer img{height:26px;width:auto}
       <h1>Важливе та <span>співпраця</span></h1>
       <p class="lead">Усе, що потрібно для роботи з Тревелоном, в одному місці: навчання і вебінари, семінари, рекламні тури, автобуси, умови оплат і комісія.</p>
       <div class="stats">
-        <div class="stat"><b>до <span data-count="12">12</span>%</b><small>комісія за мотиваційною програмою</small></div>
-        <div class="stat"><b id="ebDays">—</b><small>до кінця раннього бронювання</small></div>
-        <div class="stat"><b>0 грн</b><small>передплата до 31.12.2026</small></div>
+        <a class="stat" href="#commission"><b>до <span data-count="12">12</span>%</b><small>комісія за мотиваційною програмою</small><i aria-hidden="true">→</i></a>
+        <a class="stat" href="#early"><b id="ebDays">—</b><small>до кінця раннього бронювання</small><i aria-hidden="true">→</i></a>
+        <a class="stat" href="#early"><b>0 грн</b><small>передплата до 31.12.2026</small><i aria-hidden="true">→</i></a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
