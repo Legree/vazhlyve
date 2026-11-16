@@ -11,7 +11,7 @@
 :root{
   --coral:#FF7A5D; --coral-press:#F47358; --ink:#171717; --red:#FF0138; --orange:#FF8000; --white:#fff;
   --c15:#FFEFEC; --c25:#FFE4DE; --c45:#FEB4A4; --c65:#FF9A84;
-  --muted:rgba(23,23,23,.66); --line:rgba(23,23,23,.1); --bg:#F7F7F7;
+  --muted:#171717; --line:rgba(23,23,23,.1); --bg:#F7F7F7;
   --r:18px; --shadow:0 1px 2px rgba(23,23,23,.04),0 8px 24px rgba(23,23,23,.05);
 }
 *{box-sizing:border-box}
@@ -91,13 +91,13 @@ main{padding:30px 0 60px;min-height:60vh}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap}
 .pill.coral{background:var(--coral);color:var(--ink)}
 .pill.soft{background:var(--c15);color:var(--ink)}
-.pill.ghost{background:rgba(23,23,23,.06);color:rgba(23,23,23,.7)}
+.pill.ghost{background:rgba(23,23,23,.06);color:#171717}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;border:0;background:var(--ink);color:#fff;font:800 14px 'Nunito Sans',sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,background .2s}
 .btn:hover{background:var(--coral);color:var(--ink);transform:translateY(-1px)}
 .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
 .btn.line:hover{background:var(--ink);color:#fff}
 .tabs{display:inline-flex;background:rgba(23,23,23,.06);border-radius:12px;padding:4px;gap:2px;flex-wrap:wrap}
-.tabs button{border:0;background:transparent;min-height:38px;padding:0 16px;border-radius:9px;font:700 14px 'Nunito Sans',sans-serif;color:rgba(23,23,23,.7);cursor:pointer;transition:background .2s,color .2s}
+.tabs button{border:0;background:transparent;min-height:38px;padding:0 16px;border-radius:9px;font:700 14px 'Nunito Sans',sans-serif;color:#171717;cursor:pointer;transition:background .2s,color .2s}
 .tabs button[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(23,23,23,.1)}
 
 /* reveal */
@@ -136,7 +136,7 @@ main{padding:30px 0 60px;min-height:60vh}
 .dur{position:absolute;right:10px;bottom:10px;background:rgba(23,23,23,.85);color:#fff;font-size:12px;font-weight:800;padding:2px 7px;border-radius:6px;font-variant-numeric:tabular-nums}
 .frame.noimg{background:var(--c15) var(--pattern-c) repeat;background-size:160px auto}
 .vid a.play{text-decoration:none}
-.vid .yt{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;margin-bottom:-10px;font-size:14px;font-weight:800;text-decoration:none;color:rgba(23,23,23,.7)}
+.vid .yt{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;margin-bottom:-10px;font-size:14px;font-weight:800;text-decoration:none;color:#171717}
 .vid .yt:hover{color:var(--coral)}
 
 /* ---------- SEMINARS ---------- */
@@ -147,7 +147,7 @@ main{padding:30px 0 60px;min-height:60vh}
 .sem ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
 .sem .row{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted)}
 .sem .row svg{width:16px;height:16px;flex-shrink:0}
-.ph{color:rgba(23,23,23,.45);font-style:italic}
+.ph{color:#171717;font-style:italic}
 
 /* ---------- PROMO TOURS ---------- */
 .promo-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--ink);color:#fff;border-radius:var(--r);padding:26px 28px;overflow:hidden;position:relative}
@@ -169,7 +169,7 @@ main{padding:30px 0 60px;min-height:60vh}
 .price{font-size:26px;font-weight:1000;letter-spacing:-.03em}
 .price small{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0}
 .closed{font-weight:800;color:var(--muted);font-size:14px;display:flex;align-items:center;gap:6px}
-.tour.is-closed{opacity:.72}
+.tour.is-closed{background:#FAFAFA}
 
 /* ---------- BUS ---------- */
 .acc{border-top:1px solid var(--line)}
@@ -242,7 +242,7 @@ td.span{color:var(--muted);font-weight:600}
 .base{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 .base div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
 .base b{display:block;font-size:34px;font-weight:1000;letter-spacing:-.04em;color:var(--coral)}
-.base b.zero{color:rgba(23,23,23,.35)}
+.base b.zero{color:#171717}
 .base div>span{font-weight:700;font-size:15px}
 .levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
 .lvl{border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);position:relative;overflow:hidden}
@@ -327,7 +327,7 @@ footer img{height:26px;width:auto}
   .tbl td br{display:none}
 }
 /* ---------- Правки за UI/UX-аудитом ---------- */
-:root{--coral-ink:#E8553A;--ink-80:rgba(23,23,23,.8)}
+:root{--coral-ink:#E8553A;--ink-80:#171717}
 .hero h1 span{color:var(--coral-ink)}
 .stat small{display:block;color:var(--ink-80);line-height:1.35;margin-top:2px}
 a.stat{padding-right:50px}
@@ -340,9 +340,9 @@ a.stat i{width:30px;height:30px;font-size:16px;right:12px;top:12px}
 .btn.line{background:transparent;color:var(--ink)}
 .btn.line:hover{background:var(--ink);color:#fff}
 main{padding-top:28px}
-.note{color:rgba(23,23,23,.75)}
+.note{color:#171717}
 sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var(--coral-ink);margin-left:1px}
-.fn{font-size:14px;line-height:1.6;color:rgba(23,23,23,.78)}
+.fn{font-size:14px;line-height:1.6;color:#171717}
 .fn p{max-width:75ch}
 .fn p+p{margin-top:6px}
 .fn sup{color:var(--ink)}
@@ -430,8 +430,26 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .lvl.l4 q{color:var(--muted)}
 .perks td{font-size:14px;font-weight:700}
 .yes{color:var(--coral-ink);font-weight:1000;font-size:18px}
-.no{color:rgba(23,23,23,.3);font-weight:800}
+.no{color:#171717;font-weight:800}
 .head-badges{display:flex;gap:8px;flex-wrap:wrap}
+.subnav.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.xlink{position:relative;display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);padding-right:60px;transition:border-color .2s,transform .2s}
+.xlink:hover{color:var(--ink);border-color:var(--c45);transform:translateY(-2px)}
+.xlink b{font-size:18px;font-weight:900}
+.xlink span{font-size:15px;color:var(--muted)}
+.xlink i{position:absolute;right:20px;top:50%;margin-top:-16px;width:32px;height:32px;border-radius:50%;background:var(--c15);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900}
+.xlink:hover i{background:var(--coral)}
+@media (max-width:600px){.subnav.two{grid-template-columns:1fr}}
+.lvl .fact{margin-top:auto;font-size:13px;font-weight:700;color:var(--muted)}
+.lvl h3{font-size:19px}
+.qs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.q{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px}
+.q b{display:block;font-size:20px;font-weight:1000}
+.q span{font-size:13px;font-weight:700;color:var(--muted)}
+.q.on{border-color:var(--coral);box-shadow:0 0 0 4px var(--c15)}
+.q em{position:absolute;top:10px;right:10px;font-style:normal;font-size:12px;font-weight:900;background:var(--coral);border-radius:999px;padding:2px 9px}
+.qt td{font-weight:800;font-size:16px}
+@media (max-width:600px){.qs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){
   .nav .wrap{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 32px),transparent)}
   .bus-grid{grid-template-columns:1fr}
@@ -473,7 +491,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       <h1>Важливе та <span>співпраця</span></h1>
       <p class="lead">Усе, що потрібно для роботи з Тревелоном, в одному місці.</p>
       <div class="stats">
-        <a class="stat" href="#commission" title="Комісія за мотиваційною програмою: до 12% для рівня «Легенда»"><b>до <span data-count="12">12</span>%</b><small>комісія за мотиваційною програмою</small><i aria-hidden="true">→</i></a>
+        <a class="stat" href="#loyalty" title="Програма лояльності 2027: до 12% на борту «Мрія»"><b>до <span data-count="12">12</span>%</b><small>комісія за програмою «Набір висоти»</small><i aria-hidden="true">→</i></a>
         <a class="stat" href="#early" title="Скільки днів залишилось до кінця акції раннього бронювання"><b id="ebDays">—</b><small>до кінця акції раннього бронювання</small><i aria-hidden="true">→</i></a>
         <a class="stat" href="#early" title="Передплата 0 ₴ при бронюванні до 31.12.2026"><b>0&nbsp;₴</b><small>передплата при бронюванні до 31.12.2026</small><i aria-hidden="true">→</i></a>
       </div>
@@ -768,9 +786,21 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
   <div class="sec-head rv">
     <div>
       <span class="eyebrow">05 · Комісія</span>
-      <h2>Комісійна програма «Літо 2026»</h2>
-      <p>Базова винагорода і мотиваційна програма: що більше туристів ви бронюєте, то вища комісія і більше бонусів.</p>
-      <span class="period" data-until="2026-10-31" data-prefix="Бронювання за програмою"></span>
+      <h2>Комісія</h2>
+      <p>Базова агентська винагорода та програма лояльності 2027 «Набір висоти» з підвищеною комісією.</p>
+    </div>
+  </div>
+  <nav class="subnav two rv" aria-label="Підрозділи комісії">
+    <a href="#commission" data-subl="base"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5L5 19"/><path d="M17.5 20C18.8807 20 20 18.8807 20 17.5C20 16.1193 18.8807 15 17.5 15C16.1193 15 15 16.1193 15 17.5C15 18.8807 16.1193 20 17.5 20Z"/><path d="M6.5 9C7.88071 9 9 7.88071 9 6.5C9 5.11929 7.88071 4 6.5 4C5.11929 4 4 5.11929 4 6.5C4 7.88071 5.11929 9 6.5 9Z"/></svg><span><b>Звичайні комісії</b><small>базова винагорода</small></span></a>
+    <a href="#loyalty" data-subl="loyalty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg><span><b>Програма лояльності</b><small>«Набір висоти» 2027 · до 12%</small></span></a>
+  </nav>
+
+<div class="sub" data-sub="base">
+  <div class="sec-head rv">
+    <div>
+      <span class="eyebrow">Звичайні комісії</span>
+      <h2>Базова агентська винагорода</h2>
+      <p>Комісія за типом туру чи послуги, яку ви отримуєте з кожного бронювання.</p>
     </div>
   </div>
   <div class="base rv">
@@ -779,47 +809,70 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <div><b><span data-count="10">10</span>%</b><span>Індивідуальні та групові тури</span></div>
     <div><b class="zero">0%</b><span>Авіа- та автобусні квитки</span></div>
   </div>
+  <div class="grid g2" style="margin-top:16px">
+    <a class="card pad xlink rv" href="#loyalty"><b>До 12% — у програмі лояльності</b><span>Накопичуйте пасажирів за рік і пересідайте на потужніший борт.</span><i aria-hidden="true">→</i></a>
+    <a class="card pad xlink rv" href="#services"><b>10% — з додаткових послуг</b><span>Попереднє бронювання, реєстрація на рейс, повернення 80% вартості.</span><i aria-hidden="true">→</i></a>
+  </div>
+</div>
 
-  <h3 class="blk-title rv">Мотиваційна програма</h3>
-  <div class="levels">
-    <div class="lvl l1 rv"><div class="thr">0–19<small>туристів</small></div><div class="rate">10%</div><h3>Перспективний</h3><q>Раді знайомству! Починаймо працювати разом.</q></div>
-    <div class="lvl l2 rv"><div class="thr">20–49<small>туристів</small></div><div class="rate">10,5%</div><h3>Вправний</h3><q>Туристи бронюються, гроші заробляються — усе йде за планом.</q></div>
-    <div class="lvl l3 rv"><div class="thr">50–149<small>туристів</small></div><div class="rate">11%</div><h3>Майстер</h3><q>Коли ви говорите — усі слухають і записують.</q></div>
-    <div class="lvl l4 rv"><svg class="crown" viewBox="0 0 24 24" fill="#FF7A5D" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg><div class="thr">150+<small>туристів</small></div><div class="rate">12%</div><h3>Легенда</h3><q>Запрошуємо на всі заходи. Дасте автограф?</q></div>
+<div class="sub" data-sub="loyalty" hidden>
+  <div class="sec-head rv">
+    <div>
+      <span class="eyebrow">Програма лояльності</span>
+      <h2>Програма лояльності 2027 «Набір висоти»</h2>
+      <p>Ви — пілот, ваші туристи — пасажири на борту. Що більше пасажирів ви накопичуєте за рік, то потужніший ваш борт і вища комісія. Програма діє з 01.11.2026 до 31.10.2027.</p>
+    </div>
+  </div>
+  <h3 class="blk-title rv" style="margin-top:4px">Борти програми</h3>
+  <p class="note rv" style="margin-top:6px">Пороги — пасажирів (туристів), накопичених з 01.11.2026 до кінця програми 31.10.2027.</p>
+  <div class="levels" style="margin-top:14px">
+    <div class="lvl l1 rv"><div class="thr">0–29<small>пасажирів за рік</small></div><div class="rate">10%</div><h3>Ан-2 «Кукурузник»</h3><q>Легенда, з якої починали всі пілоти. Злітаємо разом!</q><span class="fact">понад 18 000 збудовано</span></div>
+    <div class="lvl l2 rv"><div class="thr">30+<small>пасажирів за рік</small></div><div class="rate">10,5%</div><h3>Ан-10 «Україна»</h3><q>Регулярні рейси, повна посадка — усе за розкладом.</q><span class="fact">пасажирський лайнер, до 100 місць</span></div>
+    <div class="lvl l3 rv"><div class="thr">75+<small>пасажирів за рік</small></div><div class="rate">11%</div><h3>Ан-124 «Руслан»</h3><q>Беретеся за те, що іншим не під силу. Ваш позивний знають у кожному аеропорту.</q><span class="fact">до 120 т на борту</span></div>
+    <div class="lvl l4 rv"><svg class="crown" viewBox="0 0 24 24" fill="#FF7A5D" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg><div class="thr">225+<small>пасажирів за рік</small></div><div class="rate">12%</div><h3>Ан-225 «Мрія»</h3><q>Одна така на весь світ. Запрошуємо на всі заходи — автограф на крилі?</q><span class="fact">640 т, 6 двигунів</span></div>
   </div>
 
-  <div class="card rv" style="margin-top:16px">
-    <div class="pad tb-h"><h3>Що відкриває кожен рівень</h3></div>
-    <div class="tbl" role="region" aria-label="Бонуси рівнів" tabindex="0"><table class="perks">
-      <caption class="sr">Бонуси за рівнями мотиваційної програми</caption>
-      <thead><tr><th scope="col">Бонус</th><th scope="col">Перспективний</th><th scope="col">Вправний</th><th scope="col">Майстер</th><th scope="col">Легенда</th></tr></thead>
+  <h3 class="blk-title rv">Квартальні точки</h3>
+  <p class="note rv" style="margin-top:6px">У кожній точці перевіряємо, скільки пасажирів ви накопичили. Досягнутий борт дає свій відсоток на продажі наступного кварталу.</p>
+  <div class="qs rv">
+    <div class="q" data-from="2026-11-01" data-to="2027-01-31"><b>Q1</b><span>01.11.2026 – 31.01.2027</span></div>
+    <div class="q" data-from="2027-02-01" data-to="2027-04-30"><b>Q2</b><span>01.02.2027 – 30.04.2027</span></div>
+    <div class="q" data-from="2027-05-01" data-to="2027-07-31"><b>Q3</b><span>01.05.2027 – 31.07.2027</span></div>
+    <div class="q" data-from="2027-08-01" data-to="2027-10-31"><b>Q4</b><span>01.08.2027 – 31.10.2027</span></div>
+  </div>
+  <div class="card rv" style="margin-top:12px">
+    <div class="pad tb-h"><h3>Скільки пасажирів потрібно на кожну дату</h3><small>Накопичувальний лічильник з 01.11.2026</small></div>
+    <div class="tbl" role="region" aria-label="Пороги бортів за кварталами" tabindex="0"><table class="qt">
+      <caption class="sr">Пороги бортів у пасажирах на кожну квартальну точку</caption>
+      <thead><tr><th scope="col">Борт · комісія</th><th scope="col">на 31.01.2027</th><th scope="col">на 30.04.2027</th><th scope="col">на 31.07.2027</th><th scope="col">на 31.10.2027</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Власний куратор</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">✓</span></td><td><span class="yes" role="img" aria-label="так">✓</span></td></tr>
-        <tr><th scope="row">Інфотури</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td>пріоритетне підтвердження</td><td>завжди вільне місце</td></tr>
-        <tr><th scope="row">Центральний офіс Тревелону</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td>знаєте, де він</td><td>власне робоче місце, чай, кава, печиво</td></tr>
-        <tr><th scope="row">Група «Близьке коло анонімних Тревелонщиків»</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">✓</span></td></tr>
-        <tr><th scope="row">Запрошення на всі заходи — можна взяти колегу</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">✓</span></td></tr>
-        <tr><th scope="row">Таксі додому</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">✓</span></td></tr>
+        <tr><th scope="row">Ан-2 «Кукурузник» · 10%</th><td>0–4</td><td>0–9</td><td>0–19</td><td>0–29</td></tr>
+        <tr><th scope="row">Ан-10 «Україна» · 10,5%</th><td>5+</td><td>10+</td><td>20+</td><td>30+</td></tr>
+        <tr><th scope="row">Ан-124 «Руслан» · 11%</th><td>12+</td><td>26+</td><td>50+</td><td>75+</td></tr>
+        <tr><th scope="row">Ан-225 «Мрія» · 12%</th><td>35+</td><td>80+</td><td>150+</td><td>225+</td></tr>
       </tbody>
     </table></div>
   </div>
 
   <div class="grid g2" style="margin-top:16px">
     <div class="card pad rv">
-      <h3 style="font-size:19px;font-weight:900;margin-bottom:14px">Умови підвищеної комісії</h3>
+      <h3 style="font-size:19px;font-weight:900;margin-bottom:14px">Правила польоту</h3>
       <dl class="kv">
-        <dt>Дати бронювань</dt><dd>01.04.2026 – 31.10.2026</dd>
-        <dt>Дати заїздів</dt><dd>Будь-які</dd>
-        <dt>Строк дії</dt><dd>до 31.12.2026</dd>
-        <dt>Що враховується</dt><dd>Заброньовані повні пакетні та індивідуальні тури (готель, страхування, трансфер і транспорт)</dd>
+        <dt>Період програми</dt><dd>01.11.2026 – 31.10.2027</dd>
+        <dt>Стартовий борт</dt><dd>Визначається за вашими продажами 2026 року</dd>
+        <dt>Хто рахується</dt><dd>Туристи за датою продажу — лише в підтверджених і оплачених турах. Скасовані тури знімаються з лічильника</dd>
+        <dt>Зміна комісії</dt><dd>На квартальній точці — на продажі наступного кварталу</dd>
+        <dt>Рівень протягом року</dt><dd>Не знижується. Але якщо 3 місяці поспіль немає продажів, комісія повертається до 10%</dd>
         <dt>Хто бере участь</dt><dd>Усі агентства<sup>1</sup></dd>
       </dl>
     </div>
     <div class="card pad fn rv">
+      <p>Річного перерахунку (доплати за рік) немає: відсоток борту діє на продажі кварталу, що йде за квартальною точкою.</p>
       <p><sup>1</sup> «Усі агентства» — агенти, які мають прямий договір з туроператором Тревелон (ТОВ «Транспортал») і не є агентствами мереж та консолідаторами.</p>
-      <p>Комісія перераховується наступного дня о 9:00. Якщо ви досягли умов підвищення раніше — напишіть на <a href="mailto:agent@travelon.to">agent@travelon.to</a>, і ми перерахуємо комісію.</p>
+      <p>Питання щодо програми — <a href="mailto:agent@travelon.to">agent@travelon.to</a>.</p>
     </div>
   </div>
+</div>
 </section>
 
 <!-- ================= 8. ДОДАТКОВІ ПОСЛУГИ ================= -->
@@ -1038,12 +1091,12 @@ function renderSeminars() {
   $('#semList').innerHTML = SEMINARS.map(s => {
     const [d, m] = (s.date || '').split('.');
     return `<article class="card pad sem rv">
-      <div class="date">${d ? `<b>${esc(d)}.${esc(m || '')}</b>` : `<b style="color:rgba(23,23,23,.25)">—</b>`}<span class="pill soft">Travelon Talks</span></div>
+      <div class="date">${d ? `<b>${esc(d)}.${esc(m || '')}</b>` : `<b style="color:#171717">—</b>`}<span class="pill soft">Travelon Talks</span></div>
       <h3>${esc(s.city)}</h3>
       <div class="row">${pin}${s.place ? esc(s.place) : tbd}</div>
       <div class="row">${clock}${s.time ? esc(s.time) : tbd}</div>
       ${s.topics && s.topics.length ? `<ul>${s.topics.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
-      ${s.link ? `<a class="btn" href="${esc(s.link)}" target="_blank" rel="noopener">Зареєструватися →</a>` : `<span class="btn line" aria-disabled="true" style="opacity:.55;cursor:default">Реєстрація відкриється згодом</span>`}
+      ${s.link ? `<a class="btn" href="${esc(s.link)}" target="_blank" rel="noopener">Зареєструватися →</a>` : `<span class="btn line" aria-disabled="true" style="cursor:default;box-shadow:inset 0 0 0 1.5px #171717;border:0;background:transparent;outline:1.5px dashed #fff;outline-offset:-1.5px">Реєстрація відкриється згодом</span>`}
     </article>`;
   }).join('');
 }
@@ -1093,6 +1146,13 @@ function renderBuses() {
     el.textContent = ended ? `${pre ? pre + ': період' : 'Період'} завершився ${d}` : `${pre ? pre + ' — до' : 'Діє до'} ${d}`;
   });
 })();
+
+/* --- Поточний квартал програми лояльності --- */
+$$('.q[data-from]').forEach(q => {
+  const n = new Date(), on = n >= new Date(q.dataset.from + 'T00:00:00') && n <= new Date(q.dataset.to + 'T23:59:59');
+  q.classList.toggle('on', on);
+  if (on) q.insertAdjacentHTML('beforeend', '<em>зараз</em>');
+});
 
 /* --- Посилання --- */
 $$('[data-link]').forEach(a => { const u = LINKS[a.dataset.link]; if (u) a.href = u; });
@@ -1153,15 +1213,16 @@ $$('[data-count]').forEach(el => {
 const navLinks = $$('.nav a');
 const secs = $$('main .sec');
 navLinks.forEach(a => a.setAttribute('aria-controls', a.getAttribute('href').slice(1)));
-const SUB_IDS = ['seminars', 'promo'];
+const SUB_OF = { seminars: 'learn', promo: 'learn', loyalty: 'commission' };
+const SUB_DEF = { learn: 'webinars', commission: 'base' };
 function showTab(id, scroll) {
   let sub = null;
-  if (SUB_IDS.includes(id)) { sub = id; id = 'learn'; }
+  if (SUB_OF[id]) { sub = id; id = SUB_OF[id]; }
   const target = secs.find(s => s.id === id) || secs[0];
-  if (target.id === 'learn') {
-    sub = sub || 'webinars';
-    $$('.sub').forEach(p => { p.hidden = p.dataset.sub !== sub; });
-    $$('.subnav a').forEach(a => { const on = a.dataset.subl === sub; a.classList.toggle('on', on); on ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'); });
+  if (SUB_DEF[target.id]) {
+    sub = sub || SUB_DEF[target.id];
+    $$('.sub', target).forEach(p => { p.hidden = p.dataset.sub !== sub; });
+    $$('.subnav a', target).forEach(a => { const on = a.dataset.subl === sub; a.classList.toggle('on', on); on ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'); });
   }
   secs.forEach(s => s.classList.toggle('active', s === target));
   navLinks.forEach(a => {
@@ -1182,7 +1243,7 @@ document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
   const h = a.getAttribute('href');
-  if (!secs.some(s => '#' + s.id === h) && !SUB_IDS.includes(h.slice(1))) return;
+  if (!secs.some(s => '#' + s.id === h) && !SUB_OF[h.slice(1)]) return;
   e.preventDefault();
   const id = a.getAttribute('href').slice(1);
   if (location.hash.slice(1) === id) showTab(id, true); else location.hash = id;
