@@ -460,6 +460,9 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .xlink i{position:absolute;right:20px;top:50%;margin-top:-16px;width:32px;height:32px;border-radius:50%;background:var(--c15);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900}
 .xlink:hover i{background:var(--coral)}
 @media (max-width:600px){.subnav.two{grid-template-columns:1fr}}
+.lvl .turn{display:flex;flex-direction:column;gap:2px;background:#fff;border:1.5px solid var(--c45);border-radius:12px;padding:8px 12px}
+.lvl .turn span{font-size:12px;font-weight:800}
+.lvl .turn b{font-size:17px;font-weight:1000}
 .lvl .fact{margin-top:auto;font-size:13px;font-weight:700;color:var(--muted)}
 .lvl h3{font-size:19px}
 .qs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
@@ -490,6 +493,52 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
   .tour .foot{min-height:0}
   .today em{font-size:12px}
 }
+/* ---------- Набір висоти ---------- */
+.fl-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center;background:var(--c15);border-radius:var(--r);padding:36px 36px 30px}
+.fl-hero h2{font-size:clamp(42px,6vw,76px);font-weight:1000;letter-spacing:-.04em;line-height:1;margin:10px 0 14px}
+.fl-hero .lead2{font-size:19px;font-weight:700;line-height:1.45;max-width:560px}
+.fl-hero ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px;font-size:16px;font-weight:700}
+.fl-hero li{display:flex;gap:10px;align-items:center}
+.fl-hero li::before{content:"";width:18px;height:18px;flex-shrink:0;background:var(--coral-ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z'/%3E%3C/svg%3E") center/contain no-repeat}
+.fl-period{display:inline-block;margin-top:18px;background:#fff;border-radius:14px;padding:6px 14px;font-size:14px;font-weight:900}
+.fl-squad{width:100%;height:auto;fill:var(--coral)}
+.fl-squad g{transform-box:fill-box}
+.fl-squad g:nth-child(1){animation:fly 6s ease-in-out infinite}
+.fl-squad g:nth-child(2){animation:fly 6s ease-in-out -1.5s infinite}
+.fl-squad g:nth-child(3){animation:fly 6s ease-in-out -3s infinite}
+.fl-squad g:nth-child(4){animation:fly 6s ease-in-out -4.5s infinite}
+@keyframes fly{50%{translate:0 -8px}}
+.fleet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px;align-items:stretch}
+.fl{position:relative;display:flex;flex-direction:column;gap:8px;background:#fff;border:2px solid var(--c25);border-radius:var(--r);padding:22px}
+.fl-pic{height:140px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:6px}
+.fl .plane{fill:var(--coral);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.fl:hover .plane{transform:translateY(-8px) rotate(-4deg)}
+.fl h3{font-size:20px;font-weight:900;letter-spacing:-.02em}
+.fl-rate{font-size:52px;font-weight:1000;letter-spacing:-.04em;line-height:1;color:var(--coral-ink)}
+.fl-thr{font-size:15px;font-weight:700}
+.fl-thr b{font-size:20px;font-weight:1000}
+.fl-turn{font-size:15px;font-weight:700;background:var(--c15);border-radius:10px;padding:6px 10px;align-self:flex-start}
+.fl-turn b{font-weight:1000}
+.fl q{font-style:italic;font-size:15px;line-height:1.45;quotes:none;margin-top:4px}
+.fl .fact{margin-top:auto;padding-top:8px;font-size:13px;font-weight:800}
+.fl.f4{background:var(--c15);border-color:var(--coral)}
+.fl.f4 .fl-turn{background:#fff}
+.tbl table.qt{border-collapse:collapse}
+.tbl table.qt th,.tbl table.qt td{border:1px solid rgba(23,23,23,.12)}
+.tbl table.qt thead th{background:var(--c15);font-size:14px;color:var(--ink)}
+.tbl table.qt tbody tr:nth-child(even) th,.tbl table.qt tbody tr:nth-child(even) td{background:#FFF8F6}
+.tbl table.qt tbody td{font-weight:800}
+.tbl table.qt tbody tr:last-child th,.tbl table.qt tbody tr:last-child td{background:var(--c15)}
+.tbl table.qt thead th:last-child,.tbl table.qt tbody td:last-child{color:var(--coral-ink)}
+.perks2 tbody tr:last-child th,.perks2 tbody tr:last-child td{background:#fff!important}
+.perks2 tbody tr:nth-child(even) th,.perks2 tbody tr:nth-child(even) td{background:#FFF8F6!important}
+.perks2 tr.hl th,.perks2 tr.hl td{background:var(--c15)!important;font-size:17px;font-weight:1000}
+.perks2 .yes{color:var(--coral-ink);font-size:18px}
+.perks2 thead th:first-child{width:44%}
+@media (max-width:600px){.tbl .perks2 tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px 4px}.tbl .perks2 tbody th{grid-column:1/-1}.tbl .perks2 td{flex-direction:column;justify-content:flex-start;gap:2px;text-align:center;padding:4px 0}.tbl .perks2 td::before{flex:none;text-align:center;font-size:11px}.tbl table.qt th,.tbl table.qt td{border:0}.tbl table.qt tbody tr:nth-child(even){background:#FFF8F6}}
+.fl .crown{position:absolute;top:16px;right:16px;width:28px;height:28px;fill:var(--coral)}
+@media (max-width:900px){.fleet{grid-template-columns:repeat(2,minmax(0,1fr))}.fl-hero{grid-template-columns:1fr}.fl-squad{max-width:520px}}
+@media (max-width:600px){.fleet{grid-template-columns:1fr}.fl-hero{padding:26px 20px}.fl-pic{height:auto;min-height:70px;margin-bottom:0}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
@@ -869,20 +918,82 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 </div>
 
 <div class="sub" data-sub="loyalty" hidden>
-  <div class="sec-head rv">
-    <div>
-      <span class="eyebrow">Програма лояльності</span>
-      <h2>Програма лояльності 2027 «Набір висоти»</h2>
-      <p>Ви — пілот, ваші туристи — пасажири на борту. Що більше пасажирів ви накопичуєте за рік, то потужніший ваш борт і вища комісія. Програма діє з 01.11.2026 до 31.10.2027.</p>
+  <div class="fl-hero rv">
+    <div class="fl-hero-txt">
+      <span class="eyebrow">Програма лояльності 2027</span>
+      <h2>Набір висоти</h2>
+      <p class="lead2">Ви — пілот. Ваші туристи — пасажири на борту. Що більше пасажирів за рік, то більший літак і вища комісія.</p>
+      <ul>
+        <li>Чотири борти — українські Антонови</li>
+        <li>Слабкого рівня немає — є різні масштаби</li>
+        <li>Від легендарного «Кукурузника» до «Мрії», єдиної у світі</li>
+      </ul>
+      <p class="fl-period">01.11.2026 – 31.10.2027 · комісія до 12%</p>
     </div>
+    <svg class="fl-squad" viewBox="0 0 1000 260" role="img" aria-label="Чотири силуети літаків, що зростають за розміром: Ан-2, Ан-10, Ан-124, Ан-225">
+      <g transform="translate(20,150) scale(0.5)"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></g>
+      <g transform="translate(170,100) scale(0.75)"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></g>
+      <g transform="translate(370,50) scale(1)"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></g>
+      <g transform="translate(610,0) scale(1.3)"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></g>
+    </svg>
   </div>
-  <h3 class="blk-title rv" style="margin-top:4px">Борти програми</h3>
-  <p class="note rv" style="margin-top:6px">Пороги — пасажирів (туристів), накопичених з 01.11.2026 до кінця програми 31.10.2027.</p>
-  <div class="levels" style="margin-top:14px">
-    <div class="lvl l1 rv"><div class="thr">0–29<small>пасажирів за рік</small></div><div class="rate">10%</div><h3>Ан-2 «Кукурузник»</h3><q>Легенда, з якої починали всі пілоти. Злітаємо разом!</q><span class="fact">понад 18 000 збудовано</span></div>
-    <div class="lvl l2 rv"><div class="thr">30+<small>пасажирів за рік</small></div><div class="rate">10,5%</div><h3>Ан-10 «Україна»</h3><q>Регулярні рейси, повна посадка — усе за розкладом.</q><span class="fact">пасажирський лайнер, до 100 місць</span></div>
-    <div class="lvl l3 rv"><div class="thr">75+<small>пасажирів за рік</small></div><div class="rate">11%</div><h3>Ан-124 «Руслан»</h3><q>Беретеся за те, що іншим не під силу. Ваш позивний знають у кожному аеропорту.</q><span class="fact">до 120 т на борту</span></div>
-    <div class="lvl l4 rv"><svg class="crown" viewBox="0 0 24 24" fill="#FF7A5D" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg><div class="thr">225+<small>пасажирів за рік</small></div><div class="rate">12%</div><h3>Ан-225 «Мрія»</h3><q>Одна така на весь світ. Запрошуємо на всі заходи — автограф на крилі?</q><span class="fact">640 т, 6 двигунів</span></div>
+
+  <h3 class="blk-title rv">Чотири борти</h3>
+  <div class="fleet">
+    <article class="fl f1 rv">
+      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:76px;height:76px" role="img" aria-label="Силует Ан-2"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></svg></div>
+      <h3>Ан-2 «Кукурузник»</h3>
+      <div class="fl-rate">10%</div>
+      <div class="fl-thr"><b>0–29</b> пасажирів за рік</div>
+      <q>Легенда, з якої починали всі пілоти. Злітаємо разом!</q>
+      <span class="fact">понад 18 000 збудовано</span>
+    </article>
+    <article class="fl f2 rv">
+      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:100px;height:100px" role="img" aria-label="Силует Ан-10 «Україна»"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></svg></div>
+      <h3>Ан-10 «Україна»</h3>
+      <div class="fl-rate">10,5%</div>
+      <div class="fl-thr"><b>30–74</b> пасажирів за рік</div>
+      <q>Регулярні рейси, повна посадка — усе за розкладом.</q>
+      <span class="fact">пасажирський лайнер, до 100 місць</span>
+    </article>
+    <article class="fl f3 rv">
+      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:118px;height:118px" role="img" aria-label="Силует Ан-124 «Руслан»"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></svg></div>
+      <h3>Ан-124 «Руслан»</h3>
+      <div class="fl-rate">11%</div>
+      <div class="fl-thr"><b>75–224</b> пасажирів за рік</div><div class="fl-turn">оборот за рік від <b>120&nbsp;000&nbsp;€</b></div>
+      <q>Беретеся за те, що іншим не під силу. Ваш позивний знають у кожному аеропорту.</q>
+      <span class="fact">до 120 т на борту</span>
+    </article>
+    <article class="fl f4 rv"><svg class="crown" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg>
+      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:136px;height:136px" role="img" aria-label="Силует Ан-225 «Мрія»"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></svg></div>
+      <h3>Ан-225 «Мрія»</h3>
+      <div class="fl-rate">12%</div>
+      <div class="fl-thr"><b>від 225</b> пасажирів за рік</div><div class="fl-turn">оборот за рік від <b>210&nbsp;000&nbsp;€</b></div>
+      <q>Одна така на весь світ.</q>
+      <span class="fact">640 т · 6 двигунів</span>
+    </article>
+  </div>
+
+  <div class="card rv" style="margin-top:16px">
+    <div class="pad tb-h"><h3>Що отримує капітан кожного борту</h3><small>● входить · — не входить</small></div>
+    <div class="tbl" role="region" aria-label="Привілеї бортів" tabindex="0"><table class="qt perks2">
+      <caption class="sr">Привілеї капітана на кожному борту</caption>
+      <thead><tr><th scope="col">Привілей</th><th scope="col">«Кукурузник»</th><th scope="col">«Україна»</th><th scope="col">«Руслан»</th><th scope="col">«Мрія»</th></tr></thead>
+      <tbody>
+        <tr class="hl"><th scope="row">Комісія</th><td>10%</td><td>10,5%</td><td>11%</td><td>12%</td></tr>
+        <tr><th scope="row">Пріоритетна лінія підтримки</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Ранній доступ до акцій і раннього бронювання</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Вітальний бокс із мерчем Тревелону</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Персональний куратор</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Пріоритет на підтвердження в рекламних турах</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Знижка 50% на рекламний тур<sup>1</sup></th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td><td><span class="no" role="img" aria-label="ні">—</span></td></tr>
+        <tr><th scope="row">Безкоштовний рекламний тур раз на рік<sup>1</sup></th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Знижка 50% на участь у SummerOn</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">Пріоритетне запрошення на заходи компанії</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+        <tr><th scope="row">VIP на всіх заходах компанії, +1 місце для колеги, і статус «Почесний член екіпажу Тревелону»</th><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="no" role="img" aria-label="ні">—</span></td><td><span class="yes" role="img" aria-label="так">●</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="pad fn" style="padding-top:12px"><p><sup>1</sup> Стосується масових рекламних турів.</p></div>
   </div>
 
   <h3 class="blk-title rv">Квартальні точки</h3>
@@ -894,15 +1005,15 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <div class="q" data-from="2027-08-01" data-to="2027-10-31"><b>Q4</b><span>01.08.2027 – 31.10.2027</span></div>
   </div>
   <div class="card rv" style="margin-top:12px">
-    <div class="pad tb-h"><h3>Скільки пасажирів потрібно на кожну дату</h3><small>Накопичувальний лічильник з 01.11.2026</small></div>
+    <div class="pad tb-h"><h3>Скільки пасажирів потрібно на кожну дату</h3><small>Скільки туристів має бути накопичено з 01.11.2026 на кожну дату</small></div>
     <div class="tbl" role="region" aria-label="Пороги бортів за кварталами" tabindex="0"><table class="qt">
       <caption class="sr">Пороги бортів у пасажирах на кожну квартальну точку</caption>
       <thead><tr><th scope="col">Борт · комісія</th><th scope="col">на 31.01.2027</th><th scope="col">на 30.04.2027</th><th scope="col">на 31.07.2027</th><th scope="col">на 31.10.2027</th></tr></thead>
       <tbody>
         <tr><th scope="row">Ан-2 «Кукурузник» · 10%</th><td>0–4</td><td>0–9</td><td>0–19</td><td>0–29</td></tr>
-        <tr><th scope="row">Ан-10 «Україна» · 10,5%</th><td>5+</td><td>10+</td><td>20+</td><td>30+</td></tr>
-        <tr><th scope="row">Ан-124 «Руслан» · 11%</th><td>12+</td><td>26+</td><td>50+</td><td>75+</td></tr>
-        <tr><th scope="row">Ан-225 «Мрія» · 12%</th><td>35+</td><td>80+</td><td>150+</td><td>225+</td></tr>
+        <tr><th scope="row">Ан-10 «Україна» · 10,5%</th><td>5–11</td><td>10–25</td><td>20–49</td><td>30–74</td></tr>
+        <tr><th scope="row">Ан-124 «Руслан» · 11%</th><td>12–34</td><td>26–79</td><td>50–149</td><td>75–224</td></tr>
+        <tr><th scope="row">Ан-225 «Мрія» · 12%</th><td>від 35</td><td>від 80</td><td>від 150</td><td>від 225</td></tr>
       </tbody>
     </table></div>
   </div>
@@ -915,7 +1026,8 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
         <dt>Стартовий борт</dt><dd>Визначається за вашими продажами 2026 року</dd>
         <dt>Хто рахується</dt><dd>Туристи за датою продажу — лише в підтверджених і оплачених турах. Скасовані тури знімаються з лічильника</dd>
         <dt>Зміна комісії</dt><dd>На квартальній точці — на продажі наступного кварталу</dd>
-        <dt>Рівень протягом року</dt><dd>Не знижується. Але якщо 3 місяці поспіль немає продажів, комісія повертається до 10%</dd>
+        <dt>Рівень протягом року</dt><dd>Не знижується. Але якщо 3 місяці поспіль немає продажів, комісія повертається до 10%.<br><b>Виняток — «Руслан» і «Мрія»:</b> якщо ви досягли цієї комісії за минулий рік, вона фіксується на весь рік</dd>
+        <dt>Оборот за рік</dt><dd>«Руслан» (11%) — від 120&nbsp;000&nbsp;€, «Мрія» (12%) — від 210&nbsp;000&nbsp;€</dd>
         <dt>Хто бере участь</dt><dd>Усі агентства<sup>1</sup></dd>
       </dl>
     </div>
