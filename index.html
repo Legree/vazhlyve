@@ -165,6 +165,7 @@ main{padding:30px 0 60px;min-height:60vh}
 .facts div{flex:1 1 auto}
 .facts small,.facts b{white-space:nowrap}
 .facts b{font-size:15px;font-weight:800}
+.facts small svg{width:14px;height:14px;vertical-align:-2px;margin-right:5px;color:var(--coral-ink)}
 .tour .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
 .price{font-size:26px;font-weight:1000;letter-spacing:-.03em}
 .price small{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0}
@@ -419,6 +420,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .so-leg-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .so-leg-h b{font-size:17px;font-weight:900}
 .so-price{font-size:26px;font-weight:1000;letter-spacing:-.02em;color:var(--coral-ink)}
+.so-price sup,.so-extra b sup{font-size:.5em}
 .so-pricebox{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .so-super{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:var(--red);color:#fff;font-size:12px;font-weight:900;letter-spacing:.02em;white-space:nowrap}
 .so-fl{display:flex;gap:10px;font-size:14px;line-height:1.4}
@@ -428,6 +430,8 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .so-note{font-size:15px;font-weight:800}
 .so-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:16px;align-items:start}
 .so-left{display:flex;flex-direction:column;gap:14px}
+.facts b.so-prog{white-space:normal}
+.so-left .facts div:last-child{flex-basis:100%}
 .so-intro{align-items:center}
 .so-video{display:flex;flex-direction:column;gap:4px}
 .so-video .frame{border-radius:14px}
@@ -440,7 +444,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .so-extra span{font-size:13px;font-weight:800}
 .so-extra b{font-size:20px;font-weight:1000}
 .so-extra small{font-size:12px;font-weight:700}
-.so-pay{display:block;font-size:13px;font-weight:800;margin-top:4px}
+.so-pay{display:block;font-size:13px;font-weight:800}
 .tour.so .foot{min-height:0}
 .tour .foot{min-height:92px;align-items:flex-end}
 .tour .price sup{font-size:.5em}
@@ -692,7 +696,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       <div class="so-intro">
         <div class="so-left">
         <div class="top"><div><span class="pill coral">Унікальний захід Тревелону</span><h3>SummerOn 2027</h3><div class="dest">Туреччина · Анталія</div></div></div>
-        <div class="facts"><div><small>Дати</small><b>12.04.2027 – 19.04.2027</b></div><div><small>Ночей</small><b>6+1</b></div><div><small>Виліт</small><b>Кишинів · Краків</b></div></div>
+        <div class="facts"><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Дати</small><b>12.04.2027 – 19.04.2027</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>Ночей</small><b>6+1</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Виліт</small><b>Кишинів · Краків</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>Харчування</small><b>All Inclusive</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Програма</small><b class="so-prog">Буде супер крутою і незабутньою — очікуйте!</b></div></div>
         </div>
         <div class="so-video">
           <div class="frame" data-id="qHZ71cgtOEE">
@@ -704,38 +708,37 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       </div>
       <div class="so-legs">
         <div class="so-leg">
-          <div class="so-leg-h"><b>Виліт з Кишинева</b><span class="so-pricebox"><span class="so-super">Супер ціна до 31.12</span><span class="so-price">359&nbsp;€</span></span></div>
+          <div class="so-leg-h"><b>Виліт з Кишинева</b><span class="so-pricebox"><span class="so-super">Супер ціна до 31.12</span><span class="so-price">18&nbsp;183&nbsp;₴<sup>1</sup></span></span></div>
           <div class="so-fl"><span class="so-dir">Туди</span><span><b>Sun Express XQ315 · RMO → AYT</b><small>12.04.2027, 05:55–08:00</small></span></div>
           <div class="so-fl"><span class="so-dir">Назад</span><span><b>Sun Express XQ314 · AYT → RMO</b><small>19.04.2027, 03:05–05:00</small></span></div>
           <a class="btn so-btn" href="https://travelon.to/s/W2Xs1Y3" data-link="summeron-kishinev" target="_blank" rel="noopener">Подати заявку з Кишинева →</a>
         </div>
         <div class="so-leg">
-          <div class="so-leg-h"><b>Виліт з Кракова</b><span class="so-pricebox"><span class="so-super">Супер ціна до 31.12</span><span class="so-price">369&nbsp;€</span></span></div>
+          <div class="so-leg-h"><b>Виліт з Кракова</b><span class="so-pricebox"><span class="so-super">Супер ціна до 31.12</span><span class="so-price">18&nbsp;690&nbsp;₴<sup>1</sup></span></span></div>
           <div class="so-fl"><span class="so-dir">Туди</span><span><b>Sun Express XQ433 · KRK → AYT</b><small>12.04.2027, 07:55–11:40</small></span></div>
           <div class="so-fl"><span class="so-dir">Назад</span><span><b>Sun Express XQ432 · AYT → KRK</b><small>19.04.2027, 05:00–06:55</small></span></div>
           <a class="btn so-btn" href="https://travelon.to/s/el8VMXh" data-link="summeron-krakow" target="_blank" rel="noopener">Подати заявку з Кракова →</a>
         </div>
       </div>
-      <p class="so-note">Набираємо основну групу агентів з Кишинева!</p>
       <div class="so-extra">
-        <div><span>Наземне обслуговування</span><b>249&nbsp;€</b></div>
-        <div><span>Другий учасник від одного агентства</span><b>+100&nbsp;€</b><small>до основної вартості</small></div>
+        <div><span>Наземне обслуговування</span><b>12&nbsp;612&nbsp;₴<sup>1</sup></b></div>
+        <div><span>Другий учасник від одного агентства</span><b>+5&nbsp;065&nbsp;₴<sup>1</sup></b><small>до основної вартості</small></div>
       </div>
-      <div class="foot"><div><span class="status open">Відкрито продаж!</span><span class="so-pay">Умови оплати<sup>2</sup></span></div></div>
+      <div class="foot"><div><span class="so-pay">Умови оплати<sup>2</sup></span></div></div>
     </article>
     <article class="card pad tour is-closed rv" data-start="2026-12-06" data-end="2026-12-13">
       <div class="top"><div><span class="pill ghost">Рекламний тур</span><h3>Travelon Relax Tour</h3><div class="dest">Єгипет · Шарм-ель-Шейх</div></div></div>
-      <div class="facts"><div><small>Дати</small><b>06.12.2026 – 13.12.2026</b></div><div><small>Ночей</small><b>7</b></div><div><small>Виліт</small><b>Кишинів</b></div><div><small>Програма</small><b>Очікується</b></div><div><small>Харчування</small><b>All Inclusive</b></div></div>
+      <div class="facts"><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Дати</small><b>06.12.2026 – 13.12.2026</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>Ночей</small><b>7</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Виліт</small><b>Кишинів</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Програма</small><b>Очікується</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>Харчування</small><b>All Inclusive</b></div></div>
       <div class="foot"><div><div class="price">22&nbsp;448&nbsp;₴<sup>1</sup></div><span class="status closed">Набір закрито</span></div><div class="cta"><svg class="lock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
     </article>
     <article class="card pad tour is-closed rv" data-start="2027-01-28" data-end="2027-02-04">
       <div class="top"><div><span class="pill ghost">Воркшоп</span><h3>Work&amp;Travelon + Hurghada&nbsp;<span style="white-space:nowrap">4–5★</span></h3><div class="dest">Єгипет · Хургада</div></div></div>
-      <div class="facts"><div><small>Дати</small><b>28.01.2027 – 04.02.2027</b></div><div><small>Ночей</small><b>7</b></div><div><small>Виліт</small><b>Кишинів</b></div><div><small>Програма</small><b>Очікується</b></div><div><small>Харчування</small><b>All Inclusive</b></div></div>
+      <div class="facts"><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Дати</small><b>28.01.2027 – 04.02.2027</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>Ночей</small><b>7</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Виліт</small><b>Кишинів</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Програма</small><b>Очікується</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>Харчування</small><b>All Inclusive</b></div></div>
       <div class="foot"><div><div class="price">20&nbsp;718&nbsp;₴<sup>1</sup></div><span class="status closed">Набір закрито</span></div><div class="cta"><svg class="lock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
     </article>
     <article class="card pad tour is-closed rv" data-start="2027-01-28" data-end="2027-02-04">
       <div class="top"><div><span class="pill ghost">Воркшоп</span><h3>Work&amp;Travelon + Marsa Alam&nbsp;<span style="white-space:nowrap">4–5★</span></h3><div class="dest">Єгипет · Хургада</div></div></div>
-      <div class="facts"><div><small>Дати</small><b>28.01.2027 – 04.02.2027</b></div><div><small>Ночей</small><b>7</b></div><div><small>Виліт</small><b>Кишинів</b></div><div><small>Програма</small><b>Очікується</b></div><div><small>Харчування</small><b>All Inclusive</b></div></div>
+      <div class="facts"><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Дати</small><b>28.01.2027 – 04.02.2027</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>Ночей</small><b>7</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Виліт</small><b>Кишинів</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Програма</small><b>Очікується</b></div><div><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>Харчування</small><b>All Inclusive</b></div></div>
       <div class="foot"><div><div class="price">20&nbsp;718&nbsp;₴<sup>1</sup></div><span class="status closed">Набір закрито</span></div><div class="cta"><svg class="lock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div></div>
     </article>
   </div>
@@ -744,13 +747,13 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <p>Шановні колеги, бронюючи рекламний тур, ви автоматично погоджуєтеся з такими правилами:</p>
     <ol>
       <li>Розгляд учасника туру може тривати <b>до 14 робочих днів</b> з моменту бронювання.</li>
-      <li>Програма туру, яку буде надано (навіть якщо її ще не опубліковано), <b>обов'язкова до виконання</b> учасниками туру. Якщо умови програми порушено, туроператор має право виставити штраф за проживання в готелях за програмою туру та достроково завершити участь учасника.</li>
+      <li>Програма туру, яку буде надано (навіть якщо її ще не опубліковано), <b>обов'язкова до виконання</b> учасниками туру. Якщо умови програми порушено, туроператор має право виставити повний рахунок за проживання в готелях за програмою туру та достроково завершити участь учасника.</li>
       <li>Туроператор не гарантує раннє заселення та пізнє виселення у разі нічних рейсів.</li>
       <li>Умови оплати — відповідно до стандартних умов оплати турів.</li>
     </ol>
   </div>
   <div class="fn rv" style="margin-top:14px">
-    <p><sup>1</sup> Вартість приблизна і залежить від курсу на день бронювання. Не входять візи (якщо вони потрібні в країні перебування) та особисті витрати.</p>
+    <p><sup>1</sup> Вартість приблизна і залежить від курсу на день бронювання. Не входять візи (якщо вони потрібні в країні перебування) та особисті витрати. Актуальна ціна — у пошуку туру.</p>
     <p><sup>2</sup> SummerOn 2027: 50% у день підтвердження, повна оплата за 14 днів до заїзду.</p>
   </div>
 </div>
@@ -1397,6 +1400,7 @@ function renderBuses() {
   $$('.tour[data-start]').forEach(t => {
     const s = new Date(t.dataset.start + 'T00:00:00'), e = new Date(t.dataset.end + 'T23:59:59');
     const st = $('.status', t), cta = $('.cta', t);
+    if (!st) return;
     if (now > e) { st.textContent = 'Завершено'; st.className = 'status closed'; t.classList.add('is-closed'); if (cta) cta.innerHTML = ''; }
     else if (now >= s) { st.textContent = 'Триває'; st.className = 'status'; if (cta) cta.innerHTML = ''; }
   });
