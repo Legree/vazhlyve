@@ -573,6 +573,34 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .fl .crown{position:absolute;top:16px;right:16px;width:28px;height:28px;fill:var(--coral)}
 @media (max-width:900px){.fleet{grid-template-columns:repeat(2,minmax(0,1fr))}.fl-hero{grid-template-columns:1fr}.fl-squad{max-width:520px}}
 @media (max-width:600px){.fleet{grid-template-columns:1fr}.fl-hero{padding:26px 20px}.fl-pic{height:auto;min-height:70px;margin-bottom:0}}
+/* ---------- Telegram-боти ---------- */
+.bot-hero{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;background:var(--c15);border-radius:var(--r);padding:28px 30px}
+.bot-hero h2{font-size:clamp(32px,4.4vw,52px);font-weight:1000;letter-spacing:-.04em;margin:8px 0 8px}
+.bot-hero p{font-size:17px;font-weight:600;max-width:620px}
+.bot-cta{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.bot-cta .btn,.bot-hero .btn{height:auto;padding:10px 18px;text-align:center}
+@media (max-width:600px){.bot-hero{padding:22px 18px}.bot-cta,.bot-hero>.btn{width:100%}}
+.btn.tg svg,.bot-cta .btn svg{width:18px;height:18px}
+.feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:12px;margin-top:14px}
+.feat{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.feat>svg{width:22px;height:22px;flex-shrink:0;padding:10px;box-sizing:content-box;border-radius:12px;background:var(--c15);color:var(--coral-ink)}
+.feat b{display:block;font-size:16px;font-weight:900;margin-bottom:2px}
+.feat p{font-size:14px;line-height:1.5}
+.bot-h3{font-size:19px;font-weight:900;margin-bottom:10px}
+.bot-steps{margin:0;padding-left:22px;font-size:15px}
+.bot-steps li+li{margin-top:8px}
+.bot-steps li::marker{font-weight:1000;color:var(--coral-ink)}
+.bot-safe{display:flex;gap:14px;align-items:center;background:var(--c15);border-color:var(--c25)}
+.bot-safe>svg{width:28px;height:28px;flex-shrink:0;color:var(--coral-ink)}
+.bot-safe b{font-size:17px;font-weight:900}
+.bot-keys{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.bot-keys span{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border-radius:12px;padding:10px 14px;font-weight:800}
+.bot-keys b{width:26px;height:26px;border-radius:50%;background:var(--coral);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:1000}
+.callout.ok{background:var(--c15);border-color:var(--c45)}
+.callout.ok svg{color:var(--coral-ink)}
+.bot-tip{margin-top:16px;display:flex;flex-direction:column;gap:6px}
+.bot-tip b{font-size:17px;font-weight:900}
+.bot-tip a{font-weight:900}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
@@ -615,6 +643,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <a href="#payment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z"/><path d="M1 10H23"/></svg>Оплати та ануляції</a>
     <a href="#commission"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5L5 19"/><path d="M17.5 20C18.8807 20 20 18.8807 20 17.5C20 16.1193 18.8807 15 17.5 15C16.1193 15 15 16.1193 15 17.5C15 18.8807 16.1193 20 17.5 20Z"/><path d="M6.5 9C7.88071 9 9 7.88071 9 6.5C9 5.11929 7.88071 4 6.5 4C5.11929 4 4 5.11929 4 6.5C4 7.88071 5.11929 9 6.5 9Z"/></svg>Комісія</a>
     <a href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12V22H4V12"/><path d="M22 7H2V12H22V7Z"/><path d="M12 22V7"/><path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z"/><path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z"/></svg>Додаткові послуги</a>
+    <a href="#bots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>Telegram-боти</a>
   </div>
 </nav>
 
@@ -1152,6 +1181,92 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
   </div>
 </section>
 
+<!-- ================= 9. TELEGRAM-БОТИ ================= -->
+<section class="sec" id="bots">
+  <div class="sec-head rv">
+    <div>
+      <span class="eyebrow">07 · Telegram-боти</span>
+      <h2>Telegram-боти Тревелону</h2>
+      <p>Два боти, які працюють цілодобово: один — для вас, другий — для ваших туристів.</p>
+    </div>
+  </div>
+  <nav class="subnav two rv" aria-label="Боти">
+    <a href="#bots" data-subl="agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg><span><b>Travelon AI</b><small>для агентів · @travelon_agent_bot</small></span></a>
+    <a href="#bots-tourist" data-subl="bots-tourist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span><b>Travelon Concierge</b><small>для туристів · @travelon_concierge_bot</small></span></a>
+  </nav>
+
+<div class="sub" data-sub="agent">
+  <div class="bot-hero rv">
+    <div>
+      <span class="eyebrow">Для агентів · 24/7</span>
+      <h2>Travelon AI</h2>
+      <p>Telegram-бот, який працює цілодобово й відповідає на робочі питання без очікування менеджера.</p>
+    </div>
+    <a class="btn tg" href="https://t.me/travelon_agent_bot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.4l-4.9-1.5c-1.1-.3-1.1-1.1.2-1.6L20.5 2.9c.9-.3 1.7.2 1.4 1.4z"/></svg>Відкрити @travelon_agent_bot</a>
+  </div>
+  <h3 class="blk-title rv">Що вміє</h3>
+  <div class="feats">
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg><div><b>Картка заявки</b><p>Надішліть номер — бот покаже статус, оплату, документи й наступну дію.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg><div><b>Ваші заявки</b><p>Активні заїзди й виїзди, а також заброньовані за потрібний період.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg><div><b>Оплати</b><p>Скільки сплачено, який борг і дедлайн, реквізити.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><div><b>Документи</b><p>Ваучер, підтвердження, квитки, поліс — бот надсилає файл прямо в чат.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg><div><b>Довідка</b><p>Правила Travelon: оплати, ануляції, штрафи, страхування, багаж, трансфери, візи.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12M22 7H2v5h20V7zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><div><b>Акції та купони</b><p>Чинні пропозиції та промокоди на знижки при бронюванні.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg><div><b>Нагадування</b><p>Про дедлайн оплати, готові документи, зміну статусу, час трансферу й завтрашній виліт.</p></div></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card pad rv">
+      <h3 class="bot-h3">Як підключитися</h3>
+      <ol class="bot-steps">
+        <li>Відкрийте <a href="https://t.me/travelon_agent_bot" target="_blank" rel="noopener">@travelon_agent_bot</a> і натисніть «Запустити».</li>
+        <li>Введіть логін від кабінету travelon.to.</li>
+        <li>Надішліть номер будь-якої вашої заявки та прізвище туриста з неї.</li>
+      </ol>
+    </div>
+    <div class="card pad bot-safe rv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <div><b>Бот бачить лише заявки вашого агентства.</b><p>Підключення займає близько хвилини.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sub" data-sub="bots-tourist" hidden>
+  <div class="bot-hero rv">
+    <div>
+      <span class="eyebrow">Для туристів · безкоштовно · 24/7</span>
+      <h2>Travelon Concierge</h2>
+      <p>Безкоштовний Telegram-бот для туристів Travelon. Працює українською цілодобово і знімає з вас рутинні питання, але не забирає клієнта.</p>
+    </div>
+    <div class="bot-cta">
+      <a class="btn tg" href="https://t.me/travelon_concierge_bot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.4l-4.9-1.5c-1.1-.3-1.1-1.1.2-1.6L20.5 2.9c.9-.3 1.7.2 1.4 1.4z"/></svg>Відкрити @travelon_concierge_bot</a>
+      <button class="btn line" type="button" data-copytext="https://t.me/travelon_concierge_bot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Скопіювати посилання для туриста</button>
+    </div>
+  </div>
+  <div class="card pad rv" style="margin-top:16px">
+    <h3 class="bot-h3">Як турист підключається</h3>
+    <p>Відкриває бота і вводить три речі. Реєстрації й паролів немає. Працює з будь-яким бронюванням Travelon.</p>
+    <div class="bot-keys"><span><b>1</b>Номер ваучера</span><span><b>2</b>Прізвище латиницею</span><span><b>3</b>Дата народження</span></div>
+  </div>
+  <h3 class="blk-title rv">Що вміє</h3>
+  <div class="feats">
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><div><b>Документи в один клік</b><p>Ваучер, страховий поліс, авіаквитки на кожного пасажира, пам'ятка туриста.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><div><b>Переліт</b><p>Номер рейсу, дата й час вильоту та прильоту, норми багажу, онлайн-реєстрація, PNR.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Онлайн-табло Кишинева</b><p>Фактичний час, затримка у хвилинах і статус рейсу; за 3 доби до вильоту бот звіряє час із заявкою.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Трансфер і зустріч</b><p>Хто зустрічає, гаряча лінія приймаючої сторони, де шукати стійку в аеропорту; час зворотного трансферу з готелю (по Gepard — онлайн: бот сам напише туристу, щойно час з'явиться).</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><div><b>Готель</b><p>Заселення й виселення, поворотний депозит, курортний збір, харчування, пляж.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Страхування</b><p>Що покриває поліс, чіткий порядок дій при страховому випадку, контакти асистансу цілодобово.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><div><b>Перед поїздкою</b><p>Перевірка строку дії паспорта під конкретну країну, погода на дати туру, що взяти з собою.</p></div></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg><div><b>Екстрені ситуації</b><p>Миттєво дає потрібні контакти й одночасно сповіщає команду Travelon.</p></div></div>
+  </div>
+  <div class="callout ok rv" role="note" style="margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><p><b>Важливо для вас: бот не продає тури і не змінює бронювання.</b> За новою подорожжю, продовженням відпочинку чи зміною дат він відправляє туриста до його турагента — тобто до вас. Він закриває «де мій ваучер», «о котрій трансфер» і «який у мене багаж», щоб ви займалися продажем, а не довідками.</p></div>
+  <div class="card pad bot-tip rv">
+    <b>Порада</b>
+    <p>Дайте туристу посилання на бота одразу після бронювання — тоді він вчасно отримає нагадування про документи, онлайн-реєстрацію й час трансферу без вашої участі.</p>
+    <a href="https://t.me/travelon_concierge_bot" target="_blank" rel="noopener">t.me/travelon_concierge_bot ↗</a>
+  </div>
+</div>
+</section>
+
 </main>
 
 <footer>
@@ -1419,6 +1534,14 @@ $$('.q[data-from]').forEach(q => {
   if (on) q.insertAdjacentHTML('beforeend', '<em>зараз</em>');
 });
 
+/* --- Копіювання посилань --- */
+$$('[data-copytext]').forEach(b => b.addEventListener('click', async () => {
+  const text = b.dataset.copytext;
+  try { await navigator.clipboard.writeText(text); }
+  catch (_) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+  toast('Посилання скопійовано');
+}));
+
 /* --- Посилання --- */
 $$('[data-link]').forEach(a => { const u = LINKS[a.dataset.link]; if (u) a.href = u; });
 
@@ -1478,8 +1601,8 @@ $$('[data-count]').forEach(el => {
 const navLinks = $$('.nav a');
 const secs = $$('main .sec');
 navLinks.forEach(a => a.setAttribute('aria-controls', a.getAttribute('href').slice(1)));
-const SUB_OF = { seminars: 'learn', promo: 'learn', loyalty: 'commission' };
-const SUB_DEF = { learn: 'webinars', commission: 'base' };
+const SUB_OF = { seminars: 'learn', promo: 'learn', loyalty: 'commission', 'bots-tourist': 'bots' };
+const SUB_DEF = { learn: 'webinars', commission: 'base', bots: 'agent' };
 function showTab(id, scroll) {
   let sub = null;
   if (SUB_OF[id]) { sub = id; id = SUB_OF[id]; }
