@@ -585,6 +585,12 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .tbl table.qt thead th:last-child,.tbl table.qt tbody td:last-child{color:var(--coral-ink)}
 .perks2 tbody tr:last-child th,.perks2 tbody tr:last-child td{background:#fff!important}
 .perks2 tbody tr:nth-child(even) th,.perks2 tbody tr:nth-child(even) td{background:#FFF8F6!important}
+.tbl table.plan thead th{vertical-align:bottom}
+.plan .qh{display:block;font-size:15px;font-weight:1000}
+.plan .qd{display:block;font-size:11px;font-weight:700;margin-top:3px;background:#fff;border-radius:6px;padding:2px 4px}
+.plan td.tot{font-size:17px;font-weight:1000;background:#FFF8F6}
+.plan thead th:nth-last-child(-n+2){background:var(--c25)}
+.tbl table.plan thead th:first-child{width:22%}
 .perks2 tr.hl th,.perks2 tr.hl td{background:var(--c15)!important;font-size:17px;font-weight:1000}
 .perks2 .yes{color:var(--coral-ink);font-size:18px}
 .perks2 thead th:first-child{width:44%}
@@ -620,6 +626,40 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .bot-tip{margin-top:16px;display:flex;flex-direction:column;gap:6px}
 .bot-tip b{font-size:17px;font-weight:900}
 .bot-tip a{font-weight:900}
+/* ---------- Попап бортів ---------- */
+.fl-open{cursor:pointer}
+button.fl-pic{all:unset;box-sizing:border-box;cursor:pointer;width:100%;min-height:176px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;border-radius:14px;padding:6px 0 4px}
+button.fl-pic:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.fl-hint{font-size:13px;font-weight:900;color:var(--coral-ink);opacity:.85;transition:opacity .2s}
+button.fl-pic:hover .fl-hint{opacity:1;text-decoration:underline}
+.fl-pic{height:auto!important}
+.fl-squad g.fl-open:focus{outline:none}
+.fl-squad g.fl-open:focus-visible{filter:drop-shadow(0 0 6px var(--coral-ink))}
+.pl-dlg{border:0;padding:0;border-radius:22px;max-width:min(920px,calc(100vw - 24px));width:100%;max-height:calc(100vh - 32px);overflow:auto;box-shadow:0 30px 80px rgba(23,23,23,.3);color:var(--ink)}
+.pl-dlg::backdrop{background:rgba(23,23,23,.5);backdrop-filter:blur(2px)}
+.pl-dlg[open]{animation:dlgIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes dlgIn{from{opacity:0;transform:translateY(16px) scale(.98)}}
+.pl-box{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.pl-x{position:absolute;top:10px;right:10px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:24px;font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(23,23,23,.15)}
+.pl-photo{margin:0;position:relative;background:var(--c15);min-height:300px;display:flex;flex-direction:column}
+.pl-photo img{width:100%;height:100%;flex:1;object-fit:cover;display:block}
+.pl-photo img[hidden],.pl-ph[hidden]{display:none}
+.pl-ph{flex:1;display:flex;align-items:center;justify-content:center;padding:30px}
+.pl-ph svg{width:70%!important;height:auto!important;max-width:240px;fill:var(--coral)}
+.pl-photo figcaption{position:absolute;left:10px;bottom:10px;font-size:11px;font-weight:700;background:rgba(255,255,255,.88);padding:3px 8px;border-radius:999px}
+.pl-photo figcaption:empty{display:none}
+.pl-body{padding:28px 28px 26px;display:flex;flex-direction:column;gap:12px}
+.pl-body h3{font-size:clamp(26px,3vw,34px);font-weight:1000;letter-spacing:-.03em}
+.pl-lead{font-size:16px;line-height:1.55}
+.pl-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pl-stats div{background:var(--c15);border-radius:12px;padding:10px 12px}
+.pl-stats b{display:block;font-size:20px;font-weight:1000;color:var(--coral-ink);letter-spacing:-.02em}
+.pl-stats span{font-size:12px;font-weight:800}
+.pl-body h4{margin:6px 0 0;font-size:16px;font-weight:900}
+.pl-facts{margin:0;padding-left:20px;font-size:15px;line-height:1.5}
+.pl-facts li+li{margin-top:6px}
+.pl-facts li::marker{color:var(--coral-ink)}
+@media (max-width:760px){.pl-box{grid-template-columns:1fr}.pl-photo{min-height:200px;max-height:240px}.pl-body{padding:20px 18px}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
@@ -1050,10 +1090,10 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <div class="fl-sky">
       <svg class="cloud-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F1E3DF"/></linearGradient><radialGradient id="ch" cx=".4" cy=".3" r=".6"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="cs" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation="1.6"/></filter></defs></svg><span class="cloud c1"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span><span class="cloud c2"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span><span class="cloud c3"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span><span class="cloud c4"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span><span class="cloud c5"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span><span class="cloud c6"><svg viewBox="0 0 160 80" aria-hidden="true"><g filter="url(#cs)" fill="url(#cg)"><ellipse cx="80" cy="60" rx="66" ry="14"/><circle cx="40" cy="50" r="20"/><circle cx="64" cy="36" r="26"/><circle cx="94" cy="30" r="30"/><circle cx="122" cy="46" r="22"/><circle cx="142" cy="56" r="12"/><circle cx="20" cy="58" r="12"/></g><ellipse cx="86" cy="26" rx="26" ry="14" fill="url(#ch)" opacity=".9"/></svg></span>
       <svg class="fl-squad" viewBox="-30 -40 1060 340" role="img" aria-label="Чотири силуети літаків, що зростають за розміром: Ан-2, Ан-10, Ан-124, Ан-225">
-        <g transform="translate(20,150) scale(0.5)"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></g>
-        <g transform="translate(170,100) scale(0.75)"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></g>
-        <g transform="translate(370,50) scale(1)"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></g>
-        <g transform="translate(610,0) scale(1.3)"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></g>
+        <g class="fl-open" data-plane="an2" role="button" tabindex="0" aria-label="Історія та факти: Ан-2 «Кукурузник»" transform="translate(20,150) scale(0.5)"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></g>
+        <g class="fl-open" data-plane="an10" role="button" tabindex="0" aria-label="Історія та факти: Ан-10 «Україна»" transform="translate(170,100) scale(0.75)"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></g>
+        <g class="fl-open" data-plane="an124" role="button" tabindex="0" aria-label="Історія та факти: Ан-124 «Руслан»" transform="translate(370,50) scale(1)"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></g>
+        <g class="fl-open" data-plane="an225" role="button" tabindex="0" aria-label="Історія та факти: Ан-225 «Мрія»" transform="translate(610,0) scale(1.3)"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></g>
       </svg>
     </div>
   </div>
@@ -1061,7 +1101,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
   <h3 class="blk-title rv">Чотири борти</h3>
   <div class="fleet">
     <article class="fl f1 rv">
-      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:76px;height:76px" role="img" aria-label="Силует Ан-2"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></svg></div>
+      <button class="fl-pic fl-open" type="button" data-plane="an2" aria-haspopup="dialog" aria-label="Історія та факти: Ан-2 «Кукурузник»"><svg class="plane" viewBox="0 0 200 200" style="width:76px;height:76px" role="img" aria-label="Силует Ан-2"><rect x="94" y="38" width="12" height="114" rx="6"/><rect x="18" y="68" width="164" height="18" rx="5"/><rect x="38" y="90" width="124" height="10" rx="4" opacity="0.6"/><rect x="68" y="140" width="64" height="12" rx="4"/><rect x="84" y="33" width="32" height="4" rx="2"/></svg><span class="fl-hint">Історія та факти ›</span></button>
       <h3>Ан-2 «Кукурузник»</h3>
       <div class="fl-rate">10%</div>
       <div class="fl-thr"><b>0–29</b> пасажирів за рік</div>
@@ -1069,7 +1109,7 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       <span class="fact">Найбільш масовий біплан в історії</span>
     </article>
     <article class="fl f2 rv">
-      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:100px;height:100px" role="img" aria-label="Силует Ан-10 «Україна»"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></svg></div>
+      <button class="fl-pic fl-open" type="button" data-plane="an10" aria-haspopup="dialog" aria-label="Історія та факти: Ан-10 «Україна»"><svg class="plane" viewBox="0 0 200 200" style="width:100px;height:100px" role="img" aria-label="Силует Ан-10 «Україна»"><rect x="92" y="14" width="16" height="172" rx="8"/><polygon points="100,76 186,90 186,100 100,98 14,100 14,90"/><rect x="62" y="70" width="8" height="24" rx="4"/><rect x="130" y="70" width="8" height="24" rx="4"/><rect x="36" y="74" width="8" height="24" rx="4"/><rect x="156" y="74" width="8" height="24" rx="4"/><polygon points="100,158 136,172 136,180 100,170 64,180 64,172"/></svg><span class="fl-hint">Історія та факти ›</span></button>
       <h3>Ан-10 «Україна»</h3>
       <div class="fl-rate">10,5%</div>
       <div class="fl-thr"><b>30–74</b> пасажирів за рік</div>
@@ -1077,18 +1117,18 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       <span class="fact">Перший пасажирський лайнер Антонова</span>
     </article>
     <article class="fl f3 rv">
-      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:118px;height:118px" role="img" aria-label="Силует Ан-124 «Руслан»"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></svg></div>
+      <button class="fl-pic fl-open" type="button" data-plane="an124" aria-haspopup="dialog" aria-label="Історія та факти: Ан-124 «Руслан»"><svg class="plane" viewBox="0 0 200 200" style="width:118px;height:118px" role="img" aria-label="Силует Ан-124 «Руслан»"><rect x="91" y="12" width="18" height="176" rx="9"/><polygon points="100,66 186,110 186,121 100,94 14,121 14,110"/><rect x="65" y="80" width="9" height="20" rx="4"/><rect x="126" y="80" width="9" height="20" rx="4"/><rect x="40" y="93" width="9" height="20" rx="4"/><rect x="151" y="93" width="9" height="20" rx="4"/><polygon points="100,150 142,172 142,181 100,168 58,181 58,172"/></svg><span class="fl-hint">Історія та факти ›</span></button>
       <h3>Ан-124 «Руслан»</h3>
       <div class="fl-rate">11%</div>
-      <div class="fl-thr"><b>75–224</b> пасажирів за рік</div><div class="fl-turn">оборот за рік <b>90&nbsp;000–199&nbsp;000&nbsp;€</b></div>
+      <div class="fl-thr"><b>75–224</b> пасажирів за рік</div>
       <q>Беретеся за те, що іншим не під силу. Ваш позивний знають у кожному аеропорту.</q>
       <span class="fact">Найбільший серійний вантажний літак світу</span>
     </article>
     <article class="fl f4 rv"><svg class="crown" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg>
-      <div class="fl-pic"><svg class="plane" viewBox="0 0 200 200" style="width:136px;height:136px" role="img" aria-label="Силует Ан-225 «Мрія»"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></svg></div>
+      <button class="fl-pic fl-open" type="button" data-plane="an225" aria-haspopup="dialog" aria-label="Історія та факти: Ан-225 «Мрія»"><svg class="plane" viewBox="0 0 200 200" style="width:136px;height:136px" role="img" aria-label="Силует Ан-225 «Мрія»"><rect x="90" y="8" width="20" height="184" rx="10"/><polygon points="100,58 194,108 194,119 100,86 6,119 6,108"/><rect x="68" y="70" width="8" height="20" rx="4"/><rect x="45" y="82" width="8" height="20" rx="4"/><rect x="22" y="94" width="8" height="20" rx="4"/><rect x="124" y="70" width="8" height="20" rx="4"/><rect x="147" y="82" width="8" height="20" rx="4"/><rect x="170" y="94" width="8" height="20" rx="4"/><polygon points="100,152 152,174 152,183 100,166 48,183 48,174"/><rect x="45" y="168" width="7" height="24" rx="3"/><rect x="148" y="168" width="7" height="24" rx="3"/></svg><span class="fl-hint">Історія та факти ›</span></button>
       <h3>Ан-225 «Мрія»</h3>
       <div class="fl-rate">12%</div>
-      <div class="fl-thr"><b>від 225</b> пасажирів за рік</div><div class="fl-turn">оборот за рік від <b>200&nbsp;000&nbsp;€</b></div>
+      <div class="fl-thr"><b>від 225</b> пасажирів за рік</div>
       <q>Одна така на весь світ.</q>
       <span class="fact">Найважчий літак, який будь-коли піднімався в небо</span>
     </article>
@@ -1125,17 +1165,18 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
     <div class="q" data-from="2027-08-01" data-to="2027-10-31"><b>Q4</b><span>01.08.2027 – 31.10.2027</span></div>
   </div>
   <div class="card rv" style="margin-top:12px">
-    <div class="pad tb-h"><h3>Скільки пасажирів потрібно на кожну дату</h3><small>Скільки туристів має бути накопичено з 01.11.2026 на кожну дату</small></div>
-    <div class="tbl" role="region" aria-label="Пороги бортів за кварталами" tabindex="0"><table class="qt">
-      <caption class="sr">Пороги бортів у пасажирах на кожну квартальну точку</caption>
-      <thead><tr><th scope="col">Борт · комісія</th><th scope="col">на 31.01.2027</th><th scope="col">на 30.04.2027</th><th scope="col">на 31.07.2027</th><th scope="col">на 31.10.2027</th></tr></thead>
+    <div class="pad tb-h"><h3>План по кварталах</h3><small>Скільки туристів потрібно продати в кожному кварталі, щоб утримати борт</small></div>
+    <div class="tbl" role="region" aria-label="План бортів по кварталах" tabindex="0"><table class="qt plan">
+      <caption class="sr">План туристів по кварталах і за рік для кожного борту</caption>
+      <thead><tr><th scope="col">Борт · комісія</th><th scope="col"><b class="qh">Q1</b><span class="qd">01.11.2026 – 31.01.2027</span></th><th scope="col"><b class="qh">Q2</b><span class="qd">01.02 – 30.04.2027</span></th><th scope="col"><b class="qh">Q3</b><span class="qd">01.05 – 31.07.2027</span></th><th scope="col"><b class="qh">Q4</b><span class="qd">01.08 – 31.10.2027</span></th><th scope="col"><b class="qh">Всього туристів за рік</b><span class="qd">01.11.2026 – 31.10.2027</span></th><th scope="col"><b class="qh">Оборот за рік</b><span class="qd">за заброньованими заявками</span></th></tr></thead>
       <tbody>
-        <tr><th scope="row">Ан-2 «Кукурузник» · 10%</th><td>0–4</td><td>0–9</td><td>0–19</td><td>0–29</td></tr>
-        <tr><th scope="row">Ан-10 «Україна» · 10,5%</th><td>5–11</td><td>10–25</td><td>20–49</td><td>30–74</td></tr>
-        <tr><th scope="row">Ан-124 «Руслан» · 11%</th><td>12–34</td><td>26–79</td><td>50–149</td><td>75–224</td></tr>
-        <tr><th scope="row">Ан-225 «Мрія» · 12%</th><td>від 35</td><td>від 80</td><td>від 150</td><td>від 225</td></tr>
+        <tr><th scope="row">Ан-2 «Кукурузник» · 10%</th><td>—</td><td>—</td><td>—</td><td>—</td><td class="tot">0–29</td><td class="tot">—</td></tr>
+        <tr><th scope="row">Ан-10 «Україна» · 10,5%</th><td>5</td><td>5</td><td>10</td><td>10</td><td class="tot">30</td><td class="tot">—</td></tr>
+        <tr><th scope="row">Ан-124 «Руслан» · 11%</th><td>12</td><td>14</td><td>24</td><td>25</td><td class="tot">75</td><td class="tot">90&nbsp;000–199&nbsp;999&nbsp;€</td></tr>
+        <tr><th scope="row">Ан-225 «Мрія» · 12%</th><td>35</td><td>45</td><td>70</td><td>75</td><td class="tot">225</td><td class="tot">від 200&nbsp;000&nbsp;€</td></tr>
       </tbody>
     </table></div>
+    <div class="pad fn" style="padding-top:12px"><p>Лічильник накопичувальний: на кожній квартальній точці враховуються всі туристи з 01.11.2026. Наприклад, для «Руслана» на 30.04.2027 потрібно щонайменше 26 туристів (12 + 14).</p></div>
   </div>
 
   <div class="grid g2" style="margin-top:16px">
@@ -1144,10 +1185,10 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
       <dl class="kv">
         <dt>Період програми</dt><dd>01.11.2026 – 31.10.2027</dd>
         <dt>Стартовий борт</dt><dd>Визначається за вашими продажами 2026 року</dd>
-        <dt>Хто рахується</dt><dd>Туристи за датою продажу — лише в підтверджених і оплачених турах. Скасовані тури знімаються з лічильника</dd>
+        <dt>Хто рахується</dt><dd>Туристи за датою продажу — лише в підтверджених і оплачених (зокрема частково) турах. Скасовані тури знімаються з лічильника</dd>
         <dt>Зміна комісії</dt><dd>На квартальній точці — на продажі наступного кварталу</dd>
-        <dt>Рівень протягом року</dt><dd>Не знижується. Але якщо 3 місяці поспіль немає продажів, комісія повертається до 10%.<br><b>Виняток — «Руслан» і «Мрія»:</b> якщо ви досягли цієї комісії за минулий рік, вона фіксується на весь рік</dd>
-        <dt>Оборот за рік</dt><dd>«Руслан» (11%) — 90&nbsp;000–199&nbsp;000&nbsp;€, «Мрія» (12%) — від 200&nbsp;000&nbsp;€</dd>
+        <dt>Рівень протягом року</dt><dd>Якщо 3 місяці поспіль з моменту завершення кварталу немає продажів, комісія повертається до 10%.<br><b>Виняток — «Руслан» і «Мрія»:</b> якщо ви досягли цієї комісії за минулий рік, вона фіксується на весь рік</dd>
+        <dt>Оборот за рік</dt><dd>«Руслан» (11%) — 90&nbsp;000–199&nbsp;999&nbsp;€, «Мрія» (12%) — від 200&nbsp;000&nbsp;€</dd>
         <dt>Хто бере участь</dt><dd>Усі агентства<sup>1</sup></dd>
       </dl>
     </div>
@@ -1290,6 +1331,21 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 </section>
 
 </main>
+<dialog class="pl-dlg" id="planeDlg" aria-labelledby="plTitle">
+  <div class="pl-box">
+    <button class="pl-x" type="button" aria-label="Закрити" data-close>×</button>
+    <figure class="pl-photo"><img id="plImg" alt="" hidden><div class="pl-ph" id="plPh"></div><figcaption id="plCap"></figcaption></figure>
+    <div class="pl-body">
+      <span class="eyebrow" id="plEye"></span>
+      <h3 id="plTitle"></h3>
+      <p class="pl-lead" id="plLead"></p>
+      <div class="pl-stats" id="plStats"></div>
+      <h4>Цікаві факти</h4>
+      <ul class="pl-facts" id="plFacts"></ul>
+    </div>
+  </div>
+</dialog>
+
 
 <footer>
   <div class="wrap">
@@ -1564,6 +1620,69 @@ $$('[data-copytext]').forEach(b => b.addEventListener('click', async () => {
   toast('Посилання скопійовано');
 }));
 
+/* --- Борти: попап з історією --- */
+const PLANES = {
+  an2: { eye: 'Борт 1 · 10%', title: 'Ан-2 «Кукурузник»', wiki: 'Antonov_An-2',
+    lead: 'Універсальний біплан КБ Олега Антонова: возив пасажирів і пошту, обробляв поля, висаджував парашутистів. Невибагливий і надійний — досі літає в багатьох країнах світу.',
+    stats: [['1947', 'перший політ'], ['18 000+', 'збудовано'], ['12', 'пасажирів']],
+    facts: ['Перший політ — 31 серпня 1947 року.', 'Найбільш масовий біплан в історії: понад 18 000 машин, які випускали в СРСР, Польщі та Китаї.', 'Прізвисько «Кукурузник» отримав за роботу в сільському господарстві — обробку полів.', 'Злітає й сідає на короткі ґрунтові смуги, тож працював там, де аеродромів не було взагалі.'] },
+  an10: { eye: 'Борт 2 · 10,5%', title: 'Ан-10 «Україна»', wiki: 'Antonov_An-10',
+    lead: 'Перший пасажирський лайнер КБ Антонова. Чотиримоторний турбогвинтовий літак, здатний працювати навіть із ґрунтових аеродромів. Літав на внутрішніх лініях до початку 1970-х.',
+    stats: [['1957', 'перший політ'], ['4', 'двигуни АІ-20'], ['до 100', 'пасажирів']],
+    facts: ['Перший політ — 7 березня 1957 року.', 'Двигуни АІ-20 розробило запорізьке КБ Івченка.', 'Назву «Україна» отримав на честь республіки, де працювало КБ Антонова.', 'На його основі створили вантажний Ан-12 — один із наймасовіших транспортних літаків у світі.'] },
+  an124: { eye: 'Борт 3 · 11%', title: 'Ан-124 «Руслан»', wiki: 'Antonov_An-124_Ruslan',
+    lead: 'Важкий транспортний літак, створений у Києві. Понад три десятиліття — найбільший серійний вантажний літак світу. На «Русланах» Antonov Airlines перевозить негабаритні вантажі по всій планеті.',
+    stats: [['1982', 'перший політ'], ['до 120 т', 'вантажу'], ['4', 'двигуни Д-18Т']],
+    facts: ['Перший політ — 24 грудня 1982 року.', 'Вантажна кабіна відкривається з обох боків: ніс піднімається вгору, а ззаду опускається рампа.', 'Шасі вміє «присідати», щоб техніка могла своїм ходом заїхати на борт.', '1985 року встановив світовий рекорд, піднявши 171 т вантажу на висоту понад 10 км.'] },
+  an225: { eye: 'Борт 4 · 12%', title: 'Ан-225 «Мрія»', wiki: 'Antonov_An-225_Mriya',
+    lead: 'Найважчий літак, який будь-коли піднімався в небо, і гордість української авіації. Збудований в єдиному екземплярі. Зруйнований у лютому 2022 року в Гостомелі під час повномасштабного вторгнення Росії — але «Мрія» залишається символом.',
+    stats: [['1988', 'перший політ'], ['640 т', 'злітна маса'], ['6', 'двигунів']],
+    facts: ['Перший політ — 21 грудня 1988 року.', 'Створювався, щоб возити на «спині» орбітальний корабель «Буран».', 'Розмах крил — 88,4 м, шасі має 32 колеса, а шість двигунів Д-18Т зробив запорізький «Прогрес».', 'Встановив понад 240 світових рекордів, зокрема підняв у повітря вантаж понад 250 т.', 'Antonov оголосив про намір відродити «Мрію».'] }
+};
+(function () {
+  const dlg = $('#planeDlg'); if (!dlg) return;
+  const img = $('#plImg'), ph = $('#plPh'), cap = $('#plCap');
+  const cache = {};
+  function setPhoto(p, key) {
+    const src = document.querySelector(`.fleet [data-plane="${key}"] svg.plane`);
+    ph.innerHTML = src ? src.outerHTML : ''; ph.hidden = false; img.hidden = true; cap.innerHTML = '';
+    const show = d => {
+      if (!d || !d.src) return;
+      img.onload = () => { img.hidden = false; ph.hidden = true; };
+      img.src = d.src; img.alt = p.title;
+      cap.innerHTML = `Фото: <a href="${d.page}" target="_blank" rel="noopener">Вікіпедія / Wikimedia Commons</a>`;
+    };
+    if (cache[key]) return show(cache[key]);
+    fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + p.wiki)
+      .then(r => r.ok ? r.json() : null)
+      .then(j => {
+        if (!j) return;
+        let s = (j.thumbnail && j.thumbnail.source) || (j.originalimage && j.originalimage.source);
+        if (!s) return;
+        s = s.replace(/\/(\d+)px-/, '/960px-');
+        cache[key] = { src: s, page: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || ('https://en.wikipedia.org/wiki/' + p.wiki) };
+        if (dlg.dataset.key === key) show(cache[key]);
+      }).catch(() => {});
+  }
+  function open(key) {
+    const p = PLANES[key]; if (!p) return;
+    dlg.dataset.key = key;
+    $('#plEye').textContent = p.eye; $('#plTitle').textContent = p.title; $('#plLead').textContent = p.lead;
+    $('#plStats').innerHTML = p.stats.map(s => `<div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('');
+    $('#plFacts').innerHTML = p.facts.map(f => `<li>${esc(f)}</li>`).join('');
+    setPhoto(p, key);
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.addEventListener('click', e => {
+    const t = e.target.closest('.fl-open'); if (t) { e.preventDefault(); open(t.dataset.plane); }
+  });
+  document.addEventListener('keydown', e => {
+    const t = e.target.closest && e.target.closest('g.fl-open');
+    if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); open(t.dataset.plane); }
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+})();
+
 /* --- Посилання --- */
 $$('[data-link]').forEach(a => { const u = LINKS[a.dataset.link]; if (u) a.href = u; });
 
@@ -1662,7 +1781,7 @@ addEventListener('hashchange', () => showTab(location.hash.slice(1), true));
 
 /* --- Підписи колонок для мобільних таблиць --- */
 $$('.tbl table').forEach(tb => {
-  const heads = $$('thead th', tb).map(th => th.textContent.trim());
+  const heads = $$('thead th', tb).map(th => { const h = th.querySelector('.qh'), d = th.querySelector('.qd'); return h ? h.textContent.trim() + (d && /^Q/.test(h.textContent) ? ' · ' + d.textContent.trim() : '') : th.textContent.trim(); });
   $$('tbody tr', tb).forEach(tr => { let c = 0; [...tr.children].forEach(td => { td.dataset.label = heads[c] || ''; c += +(td.getAttribute('colspan') || 1); }); });
 });
 
