@@ -585,6 +585,14 @@ sup{font-size:.68em;line-height:0;vertical-align:super;font-weight:900;color:var
 .tbl table.qt thead th:last-child,.tbl table.qt tbody td:last-child{color:var(--coral-ink)}
 .perks2 tbody tr:last-child th,.perks2 tbody tr:last-child td{background:#fff!important}
 .perks2 tbody tr:nth-child(even) th,.perks2 tbody tr:nth-child(even) td{background:#FFF8F6!important}
+.payt .pp{display:inline-block;min-width:64px;padding:5px 10px;border-radius:9px;background:var(--c25);font-weight:1000}
+.payt .qd2{display:block;font-size:12px;font-weight:700}
+.tbl table.payt thead th:last-child,.tbl table.payt tbody td:last-child{color:var(--ink)}
+.tbl table.payt tbody tr:last-child th,.tbl table.payt tbody tr:last-child td{background:#fff}
+.tbl table.payt tbody tr:nth-child(even) th,.tbl table.payt tbody tr:nth-child(even) td{background:#FFF8F6}
+.payt td{font-weight:800}
+.payt td.span{color:var(--ink)!important}
+.tbl table.payt thead th:first-child{width:34%}
 .tbl table.plan thead th{vertical-align:bottom}
 .plan .qh{display:block;font-size:15px;font-weight:1000}
 .plan .qd{display:block;font-size:11px;font-weight:700;margin-top:3px;background:#fff;border-radius:6px;padding:2px 4px}
@@ -680,11 +688,6 @@ button.fl-pic:hover .fl-hint{opacity:1;text-decoration:underline}
       <span class="eyebrow">Для партнерів-агентів</span>
       <h1>Важливе та <span>співпраця</span></h1>
       <p class="lead">Усе, що потрібно для роботи з Тревелоном, в одному місці.</p>
-      <div class="stats">
-        <a class="stat" href="#loyalty" title="Програма лояльності 2027: до 12% на борту «Мрія»"><b>до <span data-count="12">12</span>%</b><small>комісія за програмою «Набір висоти»</small><i aria-hidden="true">→</i></a>
-        <a class="stat" href="#early" title="Скільки днів залишилось до кінця акції раннього бронювання"><b id="ebDays">—</b><small>до кінця акції раннього бронювання</small><i aria-hidden="true">→</i></a>
-        <a class="stat" href="#early" title="Передплата 0 ₴ при бронюванні до 31.12.2026"><b>0&nbsp;₴</b><small>передплата при бронюванні до 31.12.2026</small><i aria-hidden="true">→</i></a>
-      </div>
     </div>
     <div class="hero-art" aria-hidden="true">
       <div class="blob"></div>
@@ -908,7 +911,7 @@ button.fl-pic:hover .fl-hint{opacity:1;text-decoration:underline}
     <p class="ex">Приклад для туру вартістю 50&nbsp;000&nbsp;₴: скільки має бути сплачено загалом на кожну дату.</p>
   </div>
 
-  <h3 class="blk-title rv">Загальні умови оплат і штрафів сезону</h3>
+  <h3 class="blk-title rv">Загальні умови оплат і штрафів</h3>
   <div class="grid" style="margin-top:12px">
     <div class="card rv">
       <div class="pad tb-h"><h3>Умови оплат</h3></div>
@@ -974,13 +977,20 @@ button.fl-pic:hover .fl-hint{opacity:1;text-decoration:underline}
   </div>
 
   <div data-paypanel="terms">
-    <div class="pay-cards rv">
-      <div class="pc"><h4>Пакетні тури</h4><div class="bar"><i style="width:20%"></i></div><div class="two"><div><b>20%</b><span>у день підтвердження</span></div><div style="text-align:right"><b>100%</b><span>за 14 днів до вильоту</span></div></div></div>
-      <div class="pc"><h4>Наземне обслуговування</h4><div class="bar"><i style="width:20%"></i></div><div class="two"><div><b>20%</b><span>у день підтвердження</span></div><div style="text-align:right"><b>100%</b><span>за 14 днів до заїзду</span></div></div></div>
-      <div class="pc"><h4>Тури на регулярних рейсах</h4><div class="bar"><i style="width:50%"></i></div><div class="two"><div><b>50%</b><span>у день підтвердження</span></div><div style="text-align:right"><b>100%</b><span>за 20 днів до вильоту</span></div></div></div>
-      <div class="pc"><h4>Преміум-тури</h4><div class="bar"><i style="width:30%"></i></div><div class="two"><div><b>30%</b><span>у день підтвердження</span></div><div style="text-align:right"><b>100%</b><span>за 30 днів до вильоту</span></div></div></div>
-      <div class="pc full"><h4>Авіа- та автобусні квитки</h4><div class="bar"><i></i></div><div class="two"><div><b>100%</b><span>у день підтвердження</span></div></div></div>
-      <div class="pc"><h4>Індивідуальні тури</h4><p class="note">Індивідуальні умови за домовленістю з менеджером напрямку.</p></div>
+    <div class="card rv">
+      <div class="pad tb-h"><h3>Умови оплат</h3><small>Скільки сплатити й до якого терміну</small></div>
+      <div class="tbl" role="region" aria-label="Умови оплат" tabindex="0"><table class="qt payt">
+        <caption class="sr">Умови оплат за типом туру</caption>
+        <thead><tr><th scope="col">Тип туру / послуги</th><th scope="col">Перша оплата <span class="qd2">у день підтвердження</span></th><th scope="col">Повна оплата (100%)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Пакетні тури</th><td><span class="pp">20%</span></td><td>за 14 днів до вильоту</td></tr>
+          <tr><th scope="row">Наземне обслуговування</th><td><span class="pp">20%</span></td><td>за 14 днів до заїзду</td></tr>
+          <tr><th scope="row">Тури на регулярних рейсах</th><td><span class="pp">50%</span></td><td>за 20 днів до вильоту</td></tr>
+          <tr><th scope="row">Преміум-тури</th><td><span class="pp">30%</span></td><td>за 30 днів до вильоту</td></tr>
+          <tr><th scope="row">Авіа- та автобусні квитки</th><td colspan="2" class="span"><b>100%</b> у день підтвердження</td></tr>
+          <tr><th scope="row">Індивідуальні тури</th><td colspan="2" class="span">Індивідуальні умови за домовленістю з менеджером напрямку</td></tr>
+        </tbody>
+      </table></div>
     </div>
 
     <div class="card rv" style="margin-top:16px">
@@ -1692,7 +1702,7 @@ $$('[data-link]').forEach(a => { const u = LINKS[a.dataset.link]; if (u) a.href 
   const left = Math.max(0, Math.ceil((e - n) / 864e5));
   const pct = Math.min(100, Math.max(0, (n - s) / (e - s) * 100));
   const word = d => { const a = d % 10, b = d % 100; return (a === 1 && b !== 11) ? 'день' : (a >= 2 && a <= 4 && (b < 12 || b > 14)) ? 'дні' : 'днів'; };
-  $('#ebDays').textContent = left ? `${left} ${word(left)}` : 'завершено';
+  if ($('#ebDays')) $('#ebDays').textContent = left ? `${left} ${word(left)}` : 'завершено';
   const em = $('#ebLeft');
   em.textContent = left ? `сьогодні · залишилось ${left} ${word(left)}` : 'період завершено';
   em.style.transform = pct < 15 ? 'translateX(-10px)' : pct > 85 ? 'translateX(calc(-100% + 10px))' : 'translateX(-50%)';
